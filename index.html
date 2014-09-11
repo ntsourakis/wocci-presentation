@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <title>WOCCI 2014 presentation</title>
+    
+    <meta name="author" content="Nikos Tsourakis">
+    
+    <meta name="description" content="My thesis presentation">
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/impress-progress.css" rel="stylesheet" />
+    
+    <script src="./js/jquery.1.7.1.min.js"></script>
+    <script src="./js/img-svg.js"></script>
+	<script src="./js/Chart.js"></script>
+
+</head>
+
+<body class="impress-not-supported">
+
+<div id="fallback-message">
+	You must be either using a mobile browser or an ancient one!<br/>If the latter, I sincerely suggest you come back in <a href="http://www.google.com/chrome/" target="_blank">Chrome</a>.
+</div>
+
+<div id="hint">
+	<p>
+    	Use spacebar, arrow keys or page up / down to navigate
+	</p>
+</div>
+
+<script>
+
+	if ('ontouchstart' in document.documentElement) 
+	{
+	  document.querySelector('.hint').innerHTML = '<p>Tap on the left or right to navigate</p>';
+	}
+
+	document.addEventListener("impress:substepactive", function(e) {
+		if (e.srcElement.classList.contains("downit")) {
+		    e.srcElement.classList.add("down");
+		    e.srcElement.classList.remove("downit");
+		} else
+		if (e.srcElement.classList.contains("down")) {
+		    e.srcElement.classList.add("downit");
+		    e.srcElement.classList.remove("down");
+		}
+	});
+	
+</script>
+
+<!-- Include a progress bar -->
+<div class="progressbar"><div></div></div>
+<div class="progress"></div>
+
+<!-- Presentation -->
+<div id="impress">
+       
+	<!-- Zoom out and show the whole presentation -->
+	<div id="overview" class="step" data-x="0" data-y="0" data-scale="8" data-rotate="0"></div> 
+    
+    <!-- Show the title -->
+    <div id="title" class="step" data-x="-2000" data-y="-2300" data-z='500' data-rotate='60' data-rotate-x='-15' data-rotate-y='15' data-scale='1'>
+    
+        <div class="info">WOCCI 2014, Singapore</div>
+    
+        <h1>
+        
+            <span>Formative Feedback in an Interactive Spoken CALL System</span>
+        
+            <div class="subtitle">Nikos Tsourakis, Manny Rayner, Claudia Baur</div>
+            <div class="subtitle"></div>
+            <div class="subtitle"></div>
+            <div class="subtitle"></div>
+            <div class="content" align="center"><img src="img/unige.png" width="200"></div>
+   
+        </h1>    
+    </div>
+       
+    <!-- Show the elevator pitch -->
+    <!--<div id="app-8" class="step" data-x="-500" data-y="-1800">
+		<img src="img/elevator.png" width="400">    
+        <div class="distribute-horizontal substep">
+            <div class="box bubble">Design</div>
+            <div class="box bubble">Interaction</div>
+            <div class="box bubble">Evaluation</div>
+        </div>
+    </div>-->    
+    <!--
+    <div id="app-8-2" class="step invisible" data-x="-2500" data-y="-1800">
+        <img src="img/elevator.png" width="400">
+        <div class="box ballon ballon-down">deployment</div>
+        <div class="box ballon ballon-down down2">evaluation</div>
+    </div>
+    
+    <div id="app-8-3" class="step invisible" data-x="-2500" data-y="-1800">
+        <img src="img/elevator.png" width="400">
+        <div class="box ballon ballon-down">deployment</div>
+        <div class="box ballon ballon-down down2">evaluation</div>
+        <div class="box ballon ballon-up">mobile</div>
+        <div class="box ballon ballon-up up2">mobile</div>
+        <div class="box ballon ballon-up up3">speech</div>
+        <div class="box ballon ballon-up up4">multimodal</div>
+    </div>
+    
+    <div id="app-8-4" class="step invisible" data-x="-2500" data-y="-1800">
+        <img src="img/elevator.png" width="400">
+        <div class="box ballon ballon-down">img.png</div>
+        <div class="box ballon ballon-down down2">img@2x.png</div>
+        <div class="box ballon ballon-up">ldpi</div>
+        <div class="box ballon ballon-up up2">mdpi</div>
+        <div class="box ballon ballon-up up3">hdpi</div>
+        <div class="box ballon ballon-up up4">xhdpi</div>
+        <div class="box ballon ballon-up up5">tvdpi</div>
+    </div>
+-->
+<!--
+    <div id="elevator" class="step slide" data-x="-2500" data-y="-1800" data-scale="0.5">
+        <table width="900" border="0">
+            <tr>
+            <td>&nbsp;<img src="img/elevator.png" width="400"></td>
+            <td>&nbsp;<div class="substep">
+            	<img src="img/evaluation-low.png" width="400" align="middle">
+             </div>
+</td>
+            
+        </table>		
+    </div>-->
+    
+    <!-- Introduσing the themes of the presentation -->
+	<div id="introduction" class="cube">
+        
+	<div class="bottomFace step" data-x="1500" data-y="-2320" data-z="-1180" data-rotate-x="60" data-rotate-y="180" data-rotate-z="45" data-scale="1">
+		<h2>Overview</h2>
+           	<table>
+                <td width="50"></td>
+                <td>
+                    <q>Formative feedback is defined as information communicated to the learner that is intended to modify his or her thinking or behavior for the purpose of improving learning</q>
+                </td>
+                <td width="50"></td>
+            </table>
+			
+            <p>&thinsp;</p>
+                                    
+            <table>
+				<td width="10"></td>
+                <td>
+                    <div class="distribute-horizontal substep">
+                        <div class="box bubble">Pronunciation errors</div>
+                        <div class="box bubble">Grammar errors</div>
+                        <div class="box bubble">Reading fluency</div>
+                        <div class="box bubble">Speech scoring</div>
+                    </div>
+                </td>  
+                <td width="10"></td>               
+            </table>
+        </div>
+        
+		<div class="topFace step" data-x="1500" data-y="-2625" data-z="-1005" data-rotate-x="60" data-rotate-y="0" data-rotate-z="45" data-scale="1">
+        	<h2>Problem to solve</h2>
+
+<div id="transform" class="substep invisible">
+                        <div class="content">
+                            <div class="tag">... but feedback is needed in different levels of the interaction!</div>                           
+                        </div>
+                    </div>
+                    <div class="substep invisible"><img src="img/baffled.png" width="80"></div>
+         
+			<p></p>
+ 			<ul>
+				<li class="substep">Report constructive commments on the interaction.</li>
+	        	<li class="substep">Typical impediments: Software installation, microphone configuration, learning how to use the interface.</li>
+            	<li class="substep">Students may be overwhelmed by the functionalities offered by the system. For example gamificaction elements.</li>  
+        	</ul>
+              
+        </div>
+        
+        <div class="rightFace step visible" data-x="1625" data-y="-2410" data-z="-985" data-rotate-x="-30" data-rotate-y="45" data-rotate-z="0" data-scale="1">
+        	<h2>Our Solution</h2>
+            <ul>
+				<li class="substep"><em>Identify</em> problematic or interesting interaction situations</li>
+	        	<li class="substep"><em>Exploit</em> information from different sources</li>
+            	<li class="substep"><em>Produce</em> the most pertinent feedback after each interaction</li> 
+                <li class="substep"><em>Make</em> it easy for developers to put logic into the system</li> 
+        	</ul>
+
+            <div class="substep invisible">
+                <div class="box bubble">	
+                    <img src="img/voila.png" width="150">
+                    Create a module based on these requirements
+                </div>
+            </div>    
+        </div>
+        
+    	<div class="backRightFace step" data-x="1625" data-y="-2535" data-z="-1200" data-rotate-x="-30" data-rotate-y="135" data-rotate-z="0" data-scale="1">    
+            <h2>Student Studies</h2>
+                <div class="substep invisible">
+                	<p align="center"><img src="img/switzerland-political_map.jpg" width="480"></p>
+                    <div class="box bubble">	
+                        <p>Conducted experiments at three secondary schools in German-speaking Switzerland (Basel - Bâle) using two versions of the system, with and without formative feedback</p>                        
+                    </div>
+                </div>
+
+        </div>
+    
+<!--        <div class="backLeftFace step" data-x="1375" data-y="-2535" data-z="-1200" data-rotate-x="-30" data-rotate-y="225" data-rotate-z="0" data-scale="1">
+			<h2>Research Questions</h2>
+            <ul>
+				<li class="substep"><em>Design.</em> What architectures for mobile platforms can be incorporated in order to offer efficient and robust systems? Will the design be based on open standards? Will this infrastructure be easily extensible and usable by others?</li>
+            	<li class="substep"><em>Interaction.</em> What are the appropriate output modalities for each situation? What kinds of different user interactions should be supported by the system?</li>
+            	<li class="substep"><em>Evaluation.</em> What makes a system more successful compared to another? What kind of evaluation should be performed, taking into account different metrics?</li>  
+        	</ul>
+        </div>-->
+    </div>
+    
+    <!-- Overview of the presentation -->
+	<div id="outline-1" class="step invisible" data-x="2500" data-y="-2035" data-z="-1200">
+        <h2>Overview of the Presentation</h2>
+        <ul class="option-list">
+            <li>
+                <span>1</span>The CALL-SLT system
+                <span>Offers students of English the opportunity to train their receptive and productive language skills in various conversational dialogue scenarios</span>
+            </li>
+        </ul>
+    </div>
+    
+    <div id="outline-1-2" class="step invisible" data-x="2500" data-y="-2035" data-z="-1200">
+    	<h2>Overview of the Presentation</h2>
+        <ul class="option-list">
+            <li>
+                <span>1</span>The CALL-SLT system
+                <span>Offers students of English the opportunity to train their receptive and productive language skills in various conversational dialogue scenarios</span>
+            </li>
+            <li>
+                <span>2</span>The Feedback Module
+				<span>Combines information from different sources and decides on the most pertinent feedback</span>
+            </li>
+        </ul>
+
+	</div>
+
+	<div id="outline-1-3" class="step invisible" data-x="2500" data-y="-2035" data-z="-1200">
+        <h2>Overview of the Presentation</h2>
+        <ul class="option-list">
+            <li>
+                <span>1</span>The CALL-SLT system
+                <span>Offers students of English the opportunity to train their receptive and productive language skills in various conversational dialogue scenarios</span>
+            </li>
+            <li>
+                <span>2</span>The Feedback Module
+				<span>Combines information from different sources and decides on the most pertinent feedback</span>
+            </li>
+            <li>
+				<span>3</span>Student Evaluation
+                <span>Performed user studies with three different schools in German-speaking Switzerland</span>
+            </li>
+        </ul>
+	</div>
+    
+	<div id="outline-1-4" class="step invisible" data-x="2500" data-y="-2035" data-z="-1200">
+        <h2>Overview of the Presentation</h2>
+        <ul class="option-list">
+            <li>
+                <span>1</span>The CALL-SLT System
+                <span>Offers students of English the opportunity to train their receptive and productive language skills in various conversational dialogue scenarios</span>
+            </li>
+            <li>
+                <span>2</span>The Feedback Module
+				<span>Combines information from different sources and decides on the most pertinent feedback</span>
+            </li>
+            <li>
+				<span>3</span>Student Evaluation
+                <span>Performed user studies with three different schools in German-speaking Switzerland</span>
+            </li>
+			<li>
+                <span>4</span>Conclusions
+                <span>Sum-up, critique and next steps</span>
+            </li>
+        </ul>
+    </div>
+	
+
+	<!-- The CALL-SLT System -->
+    
+    <!-- First milestone -->
+    <div id="milestones-1" class="step center" data-x="-2500" data-y="-700">
+        <h2>The CALL-SLT System</h2>
+        <ul class="top-list">
+            <li class="current">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    
+    </div>
+
+	<!-- CALL-SLT in a nutshell -->
+	<div class="step slide" data-x="-1000" data-y="-700">
+      <h2>CALL-SLT - Quick reminder</h2>        
+        <div>
+            <div class="box bubble">Computer assisted second language learning system</div>
+		</div>
+		<div class="substep">
+			<div class="box bubble">        
+				<div>Restaurant: "Ich möchte einen hamburger"</div>
+				<div>About me: "Mon frère s'appelle Stéphane"</div>
+   				<div>Travel: "I need one ticket to London"</div>
+			</div>
+		</div>
+        <div class="substep">
+			<div class="box bubble">        
+				<div>L1: English, French, Japanese, German, Arabic, Chinese</div>
+				<div>L2: English, French, Japanese, German, Greek, Swedish</div>
+			</div>
+		</div>
+		<div class="substep">
+			<div class="box bubble">        
+				<div>Deployed over the web on desktop &amp; mobile platforms</div>
+			</div>
+		</div>
+    </div>
+    
+    <!-- CALL-SLT -->
+	<div class="step slide" data-x="500" data-y="-700">
+        <h2>Current Interface</h2>
+    	<div id="opacity-image-02">
+            <div class="image-wrapper-02">
+                <img src="img/gui-des.png" width="800">
+                <div class="caption">English for German speakers</div>
+            </div>
+        </div>
+	</div>
+
+	<!-- Problems with current interface -->
+	<!-- Too much feedback -->
+    <div class="step slide" data-x="2000" data-y="-700">
+        <h2>A Misrecognition Occured</h2>
+            <div class="box bubble substep">Users may be overwhelmed by too much feedback</div>    
+            <div class="substep">
+                <img src="img/problem1.png" width="724">                  
+            </div>
+    </div>
+
+	<!-- Not understand certain functionalities -->
+	<div class="step slide" data-x="3500" data-y="-700">
+        <h2>I Don't Understand This ...</h2>
+        <div class="box bubble">Users may not understand certain system functionalities</div>    
+        <div>
+            <img src="img/problem2.png" width="724">                  
+        </div>
+	</div>
+    
+	<!-- What triggered certain events? -->
+	<div class="step slide" data-x="5000" data-y="-700">
+		<h2>What Triggered This?</h2>
+        <div class="box bubble">Users may not understand what triggered certain events</div>    
+        <div>
+            <img src="img/problem3.png" width="724">                  
+        </div>
+    </div>
+    
+    <!-- Unify the feedback messages  -->
+	<div class="step slide" data-x="-1500" data-y="300"?
+		<h2>Unify the feedback messages</h2>
+        <div class="substep">
+        	<div class="box bubble">
+            	<p>In terms of phrasing:</p>
+                <p><em>&nbsp;&nbsp;&nbsp;Error: 30232 An error occured while your speech was being recognized.</em></p>
+                <p>vs.</p>
+                <p><em>&nbsp;&nbsp;&nbsp;I think you are talking to close to the microphone.</em></p>
+		</div>
+        </div>
+        <div class="substep">
+        	<div class="box bubble">
+                <p>In terms of style:</p>
+                <p><em>&nbsp;&nbsp;&nbsp;You are doing excellent! Keep on! (praise)</em></p>
+                <p>vs.</p>
+                <p><em>&nbsp;&nbsp;&nbsp;You got this one, but it is not enough ... (criticize)</em></p>
+		</div>
+        </div>
+        <div class="substep">
+        	<div class="box bubble">
+            	<p>In terms of language (L1: German, L2: English):</p>
+                <p><em>&nbsp;&nbsp;&nbsp;You have lost 2 points.</em></p>
+                <p>vs.</p>
+                <p><em>&nbsp;&nbsp;&nbsp;Du hast 2 Punkte verloren.</em></p>
+            </div>
+		</div>          
+    </div>
+
+    <!-- CALL-SLT architecture -->
+	<div class="step slide invisible" data-x="0" data-y="300">
+        <h2>CALL-SLT Architecture</h2>
+        <div id="opacity-image-03">
+            <div class="image-wrapper-03">
+	            <img src="img/callslt-architecture1.png">
+            </div>
+        </div> 
+    </div>
+    
+    <div class="step slide invisible" data-x="0" data-y="300">
+        <h2>CALL-SLT Architecture</h2>
+        <div id="opacity-image-03">
+            <div class="image-wrapper-03">
+	            <img src="img/callslt-architecture2.png">
+            </div>
+        </div> 
+    </div>
+
+	<div class="step slide invisible" data-x="0" data-y="300">
+        <h2>CALL-SLT Architecture</h2>
+        <div id="opacity-image-03">
+            <div class="image-wrapper-03">
+	            <img src="img/callslt-architecture3.png">
+            </div>
+        </div> 
+    </div>
+
+	<div class="step slide invisible" data-x="0" data-y="300">
+ 		<h2>CALL-SLT Architecture</h2>
+        <div id="opacity-image-03">
+            <div class="image-wrapper-03">
+	            <img src="img/callslt-architecture4.png">
+            </div>
+        </div>          
+    </div>
+    
+    <div class="step slide invisible" data-x="0" data-y="300">
+        <h2>CALL-SLT Architecture</h2>
+        <div id="opacity-image-03">
+            <div class="image-wrapper-03">
+	            <img src="img/callslt-architecture5.png">
+            </div>
+        </div> 
+    </div>
+    
+    
+	<!-- Design architectures -->
+
+    <!-- Second milestone -->
+    <div id="milestones-2" class="step center" data-x="-3500" data-y="1200">
+        <h2>The Feedback Module</h2>
+        <ul class="top-list">
+            <li>1</li>
+            <li class="current">2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+
+	<!-- Feedback module architecture -->  
+    <div id="photo" class="step slide visible" data-x="-2000" data-y="1200" data-scale='0.5'>
+        <h2>Basic Architecture</h2>    
+        <div>
+	        <img src="img/feedback-architecture.png" width="650">
+        </div>
+    </div>
+    
+	<div class="step slide" data-x="-2000" data-y="1400" data-scale='0.7'> 
+		<p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+        	<li class="substep">Utilizes three sources of knowledge:
+                <ul>
+                    <li>the client application</li> 
+                    <li>the server-side dialogue manager</li>
+                    <li>the user waveform </li>
+                </ul>
+			</li>
+            <li class="substep">Performs an expert decision based on the three inputs</li>
+            <li class="substep">Returns a <em>single</em> message</li>
+		</ul>		
+    </div>
+    
+    
+	<div class="step slide" data-x="-1000" data-y="1200" data-scale='0.5'>
+        <h2>Input From The Client</h2>
+		<ul>
+        	<li>Video prompt was interrupted</li>
+			<li>The video prompt was played back again</li>
+			<li>Help requested in the wrong context</li>
+			<li>Access to the microphone was denied</li>
+            <img src="img/flash.png">
+		</ul>
+    </div>
+    
+    <div class="step slide" data-x="0" data-y="1200" data-scale='0.5'>
+        <h2>Input From The Dialogue Manager</h2>
+		<ul>
+        	<li>Points gained/lost</li>
+			<li>Total score</li>
+			<li>Number of correct/wrong responses</li>
+            <li>Number of consecutive correct/wrong responses</li> 
+            <li>Score distance to get current badge</li>
+            <li>Bonus phrase acquired</li>
+            <li>Badge already acquired</li>
+		</ul>
+    </div>
+    
+	<div class="step slide" data-x="1000" data-y="1200" data-scale='0.5'>
+        <h2>Input From The Wavefile</h2>
+		<ul>
+        	<li>Silent input</li>
+			<li>Background noise</li>
+			<li>Recording button pressed instantly</li>
+            <img src="img/micstrategies.png">
+            <li class="substep">Applied machine learning and signal processing</li>
+            <li class="substep">English-L2 child learner speech corpus, produced by 15 Swiss German-L1 students (814 utterances)</li>
+		</ul>
+    </div>
+	
+	<div class="step slide" data-x="2000" data-y="1200" data-scale='0.5'>
+        <h2>Feature space</h2>
+        <div class="box bubble">With praat toolkit we extracted 27 typical voice analysis measurements (kept the ones in green)</div> 
+		<div>
+	        <img src="img/audio-feature-space.png">
+        </div>
+    </div>
+	
+	<div class="step slide" data-x="3000" data-y="1200" data-scale='0.5'>
+        <h2>Classification task</h2>
+        <div class="box bubble">With WEKA toolkit we applied different machine learning algorithms to classify four events: high background noise, silent speech, instant press of the recording button and normal waveform</div> 
+		<div>
+	        <img src="img/classification.png">
+        </div>
+    </div>
+    
+	<div class="step example" data-x="-2000" data-y="2200" data-scale='0.5'>
+        <h2>Expert Decision</h2>
+		<ul>
+	        <li>Makes a decision based on input from the three sources</li>          
+            <li>The current set consists of 13 rules sorted in priority order</li>
+            <li>Returns four elements: 
+            	<ul>
+                	<li>Related to which widget?</li>
+                	<li>Is it critical?</li>                    
+                	<li>Is it positive or negative?</li>                    
+                	<li>Message text</li>                                                            
+				</ul>
+            </li>
+            <li>Based on the Drools open source BRMS framework</li>
+        	<li>Rules written in MVEL dialect (similar to Java source code)</li>
+		</ul>
+         
+    </div>
+    
+    <div class="step slide" data-x="-1000" data-y="2200" data-scale='0.5'>
+        <h2>Rules Set</h2>
+        <div id="opacity-image-05">
+            <div class="image-wrapper-05">
+		        <img src="img/rules1.png">
+            </div>
+        </div>
+	</div>
+    
+	<div class="step slide invisible" data-x="-1000" data-y="2200" data-scale='0.5'>
+        <h2>Rules Set</h2>
+        <div id="opacity-image-05">
+            <div class="image-wrapper-05">
+		        <img src="img/rules2.png">
+            </div>
+        </div>
+	</div>
+    
+	<div class="step slide invisible" data-x="-1000" data-y="2200" data-scale='0.5'>
+        <h2>Rules Set</h2>
+        <div id="opacity-image-05">
+            <div class="image-wrapper-05">
+		        <img src="img/rules3.png">
+            </div>
+        </div>
+	</div>
+
+	<div class="step slide invisible" data-x="-1000" data-y="2200" data-scale='0.5'>
+        <h2>Rules Set</h2>
+        <div id="opacity-image-05">
+            <div class="image-wrapper-05">
+		        <img src="img/rules4.png">
+            </div>
+        </div>
+	</div>
+
+	<div class="step slide invisible" data-x="-1000" data-y="2200" data-scale='0.5'>
+        <h2>Rules Set</h2>
+        <div id="opacity-image-05">
+            <div class="image-wrapper-05">
+		        <img src="img/rules5.png">
+            </div>
+        </div>
+	</div>
+ 
+	<div class="step slide invisible" data-x="-1000" data-y="2200" data-scale='0.5'>
+        <h2>Rules Set</h2>
+        <div id="opacity-image-05">
+            <div class="image-wrapper-05">
+		        <img src="img/rules6.png">
+            </div>
+        </div>
+	</div>
+
+	<div class="step slide invisible" data-x="-1000" data-y="2200" data-scale='0.5'>
+        <h2>Rules Set</h2>
+        <div id="opacity-image-05">
+            <div class="image-wrapper-05">
+		        <img src="img/rules7.png">
+            </div>
+        </div>
+	</div> 
+            
+    <!-- Show MVEL example -->
+    <div class="step example" data-x="0" data-y="2200" data-scale='0.5'>
+        <h2>Rules In MVEL Syntax (Server)</h2>
+		
+          <pre class="prettyprint linenums lang-mvel"><ol class="linenums"><li class="L0"><code><span class="kwd"><span class="pun">rule</span> "Muted microphone"</span></code></li><li class="L1"><code><span class="kwd"><span class="pun">when</span></span></code></li><li class="L2"><code><span class="kwd">  m : Message(getAttributes().getMuteMic() == true)</span></code></li><li class="L3"><code><span class="kwd"><span class="pun">then</span></span></code></li><li class="L4"><code><span class="kwd">  m.setType("general");</span></code></li><li class="L5"><code><span class="kwd">  m.setMessage("<span class="pun2">IDS_EXP_ALLOW</span>");</span></code></li><li class="L6"><code><span class="kwd">  m.setCritical(true);</span></code></li><li class="L7"><code><span class="kwd">  m.setEffect("negative");</span></code></li><li class="L8"><code><span class="kwd">...</span></code></li><li class="L9"><code><span class="kwd"><span class="pun">rule</span> "Many consecutive correct answers"</span></code></li><li class="L10"><code><span class="kwd"><span class="pun">when</span></span></code></li><li class="L11"><code><span class="kwd">  m : Message( (getAttributes().getScoreStreak() == 5) 
+          || (getAttributes().getScoreStreak() == 10) 
+          || (getAttributes().getScoreStreak() == 15) )</span></code></li><li class="L12"><code><span class="kwd"><span class="pun">then</span></span></code></li><li class="L13"><code><span class="kwd">  m.setType("score");</span></code></li><li class="L14"><code><span class="kwd">  m.setMessage("<span class="pun2">IDS_EXP_GOT</span>" + m.getAttributes().getScoreStreak() 
+          	  + "<span class="pun2">IDS_EXP_CORRECT</span>");</span></code></li><li class="L15"><code><span class="kwd">  m.setCritical(false);</span></code></li><li class="L6"><code><span class="kwd">  m.setEffect("positive");</span></code></li></ol></pre>
+    </div>
+
+	<!-- Show XLIFF example -->
+	<div class="step example" data-x="1000" data-y="2200" data-scale='0.5'>
+	    <h2>Localization With XLIFF (Client)</h2>
+
+  <pre class="prettyprint linenums lang-xliff"><ol class="linenums"><li class="L0"><code><span class="kwd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></code></li><li class="L1"><code><span class="kwd">&lt;xliff version="1.0" xml:lang="<span class="pun2">en</span>"&gt;</span></code></li><li class="L2"><code><span class="kwd">&lt;file datatype="plaintext" original="callslt.fla" source-language="EN"&gt;</span></code></li><li class="L3"><code><span class="kwd">&lt;header>&lt;/header&gt;</span></code></li><li class="L4"><code><span class="kwd">&lt;body&gt;</span></code></li><li class="L5"><code><span class="kwd">  &lt;trans-unit id="001" resname="<span class="pun2">IDS_EXP_ALLOW</span>"&gt;</span></code></li><li class="L6"><code><span class="kwd">    &lt;source><span class="pun">Sorry, you need to reload the page, login again and  
+        allow microphone and camera access in the message box!</span>&lt;/source&gt;</span></code></li><li class="L7"><code><span class="kwd">  &lt;/trans-unit&gt;</span></code></li><li class="L7"><code><span class="kwd">...</span></code></li></ol></pre>
+        
+         <pre class="prettyprint linenums lang-xliff"><ol class="linenums"><li class="L0"><code><span class="kwd">...</span></code></li><li class="L1"><code><span class="kwd">&lt;xliff version="1.0" xml:lang="<span class="pun2">zh-CN</span>"&gt;</span></code></li><li class="L2"><code><span class="kwd">...</span></code></li><li class="L5"><code><span class="kwd">  &lt;trans-unit id="001" resname="<span class="pun2">IDS_EXP_ALLOW</span>"&gt;</span></code></li><li class="L6"><code><span class="kwd">    &lt;source><span class="pun">&#23545;&#19981;&#36215;&#65292;&#24744;&#38656;&#35201;&#37325;&#26032;&#25171;&#39029;&#38754;&#65292;&#37325;&#26032;&#30331;&#38470;&#65292;&#28608;&#27963;&#40614;&#20811;&#39118;&#21644;&#29031;&#30456;&#26426;&#24403;</span>&lt;/source&gt;</span></code></li><li class="L7"><code><span class="kwd">...</span></code></li></ol></pre>
+       
+	</div>
+
+	<div class="step slide" data-x="2000" data-y="2200" data-scale='0.5'>
+        <h2>Feeback Message On The GUI</h2>
+        <div id="opacity-image-04">
+            <div class="image-wrapper-04">
+	            <img src="img/gui1.png" width="570">
+            </div>
+        </div>
+		<div id="opacity-image-04"  class="substep">
+            <div class="image-wrapper-04">
+	            <img src="img/gui2.png" width="570">
+				<div class="caption">Silent speech (critical-negative)</div>
+            </div>
+        </div> 
+    </div>
+    
+        
+	<!-- Student Evaluation -->
+
+    <!-- Third milestone -->
+    <div id="milestones-3" class="step center" data-x="-5000" data-y="-2800">
+        <h2>Student Evaluation</h2>
+        <ul class="top-list">
+            <li>1</li>
+            <li>2</li>
+            <li class="current">3</li>
+            <li>4</li>
+        </ul>
+    
+    </div>
+    
+    <!-- Participant demographics -->        	
+	<div class="step slide" data-x="-5000" data-y="-2300" data-scale='0.25'>
+        <h2>Participant Demographics</h2>
+        <div class="box bubble">Three classrooms in three secondary schools in German-speaking Switzerland used one of the two versions. Homework assignment; it did not affect the final grade.</div> 
+		<div>
+	        <img src="img/participants.png">
+        </div>
+    </div>
+    
+    <div id="impact-anim1" class="step slide invisible" data-x="-5000" data-y="-1800" data-scale='0.25'>
+   		<h2>Problems In CALL Evaluations</h2>
+        <ul>
+	        <li class="substep">If we use students from same class, they will be aware of the other version</li>          
+            <li class="substep">If we use students from different classes, hard to correct for fact that some classes are much better than others</li>
+            <li class="substep">Very difficult to find uniform classes</li> 
+            <li class="substep"><em>But:</em> A control group is essential
+            	<ul>
+                	<li>Improvement in language learning, or in student motivation or in solving interaction problems must be relative to something</li>
+                </ul>
+            </li>
+            <li class="substep animation"><em>No-feedback as control group</em></li>            
+		</ul>
+	</div>
+    
+	<!-- Comparison Measurements -->
+    <div class="step slide" data-x="-5000" data-y="-1300" data-scale='0.25'>
+    	<h2>Comparison Measurements</h2>
+        <ul>
+            <li>Evaluation across two dimensions:
+	            <ul>
+                	<li>Motivation
+                    	<ul>
+                            <li>Student score per session</li>
+                            <li>Interactions per session</li>                    
+                            <li>Total number of sessions</li>                    
+                            <li>Badges acquired</li>                                                            
+						</ul>
+                    </li>
+                    <li>Problem resolution</li>
+                    	<ul>
+                        	<li>Examine if the error has been resolved in the subsequent interaction</li>
+                        </ul>
+			    </ul>        
+			</li>
+		</ul>
+    </div>
+    
+
+  	<!-- Show the performance plots -->
+	<div class="step slide" data-x="-5000" data-y="-800" data-scale='0.25'>
+		<h2>"Motivation" ??Among Classrooms</h2>
+        <meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+        <style>
+        	canvasScoreProp{
+        	}
+			canvasMeanInter{
+    	    }
+			canvasTotalInter{
+        	}			
+			canvasSessions{
+    	    }			
+        </style>
+
+        <table width="881" border="0">
+          <tr>
+            <td width="349">Avg. Score per Session</td>
+            <td width="349">Avg. Interactions per Session</td>
+            <td width="4" rowspan="2">&nbsp;</td>
+            <td width="161" rowspan="2"><p><em>S1-S2:</em></p>
+              <p><em>no feedback</em></p>
+              <p>&nbsp;</p>
+              <p><em>S3:</em></p>
+              <p><em>feedback</em></p></td>
+          </tr>
+          <tr>
+            <td><canvas id="canvasScoreProp" height="230" width="370"></canvas></td>
+            <td><canvas id="canvasMeanInter" height="230" width="370"></canvas></td>
+            </tr>
+          <tr>
+            <td>Avg. Number of Interactions</td>
+            <td>Avg. Number of Sessions</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        
+          <tr>
+            <td><canvas id="canvasTotalInter" height="230" width="370"></canvas></td>
+            <td><canvas id="canvasSessions" height="230" width="370"></canvas></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+                    
+        <script>
+        
+			var barChartData1 = {
+				ypostfix : [""],
+				labels : ["S1","S2","S3"],
+				datasets : [
+					{
+						fillColor : "rgba(200,127,60,0.5)",
+						strokeColor : "rgba(200,127,60,1)",
+						data : [66.42782272,45.2431549,71.32524936]
+					}					
+				]			
+			}
+			var barChartData2 = {
+				ypostfix : [""],
+				labels : ["S1","S2","S3"],
+				datasets : [
+					{
+						fillColor : "rgba(200,127,60,0.5)",
+						strokeColor : "rgba(200,127,60,1)",
+						data : [34.27575758,31.89102564,68.50185185]
+					}					
+				]			
+			}			
+			var barChartData3 = {
+				ypostfix : [""],
+				labels : ["S1","S2","S3"],
+				datasets : [
+					{
+						fillColor : "rgba(200,127,60,0.5)",
+						strokeColor : "rgba(200,127,60,1)",
+						data : [161.8,104.7692308,275.1111111]
+					}					
+				]			
+			}
+			
+			var barChartData4 = {
+				ypostfix : [""],
+				labels : ["S1","S2","S3"],
+				datasets : [
+					{
+						fillColor : "rgba(200,127,60,0.5)",
+						strokeColor : "rgba(200,127,60,1)",
+						data : [4.266666667,2.769230769,4.444444444]
+					}					
+				]			
+			}				
+					
+			//var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Bar(barChartData);
+			
+        </script>
+
+	</div>
+    
+  	<!--  -->
+	<div class="step slide" data-x="-5000" data-y="-300" data-scale='0.25'>
+		<h2>Badges Acquired & Subjective Opinion</h2>
+        <div class="substep">
+	        <img src="img/total-badges.png" width="450">
+        </div>
+        <p></p>
+		<div class="substep">
+	        <img src="img/subjective-reduced2.png" width="900">
+        </div>
+	</div>
+  
+	<!--  -->
+	<div class="step slide" data-x="-5000" data-y="200" data-scale='0.25'>
+		<h2>Problem Solving</h2>
+       		
+        <div class="box">Frequency of feedback presented in the subsequent interaction after an error</div>
+       
+	</div>
+    
+	<!--  -->
+	<div class="step slide" data-x="-5000" data-y="700" data-scale='0.5'>
+		<h2>Interrupted video prompt</h2>
+        <meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+        <style>
+        	canvasInterrupted{
+        	}								
+        </style>
+		   
+		<canvas id="canvasInterrupted" height="900" width="900"></canvas>
+                    
+        <script>
+        
+			var radarChartData1 = {
+				labels : ["Help requested in wrong context","Badge already acquired","Many consecutive mistakes","Interrupted video prompt","Instant press of the rec button","Bonus points acquired","Consecutive correct answers","Above badge threshold","Nothing"],
+				datasets : [
+					{
+						fillColor : "rgba(200,127,60,0.5)",
+						strokeColor : "rgba(200,127,60,1)",
+						data : [1,2,4,13,1,23,11,2,35]
+					}					
+				]			
+			}
+			
+			
+        </script>
+
+	</div>
+    
+    
+    <!--  -->
+	<div class="step slide" data-x="-4500" data-y="700" data-scale='0.5'>
+		<h2>Many consecutive mistakes</h2>
+        <meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+        <style>        
+			canvasConcecutiveError{
+    	    }			
+        </style>
+		              
+		<canvas id="canvasConcecutiveError" height="900" width="900"></canvas>
+                    
+        <script>
+        
+			var radarChartData2 = {
+				labels : ["Help requested in wrong context","Many consecutive mistakes","Interrupted video prompt","Instant press of the rec button","Silent voice","Bonus points acquired","Above badge threshold","Nothing"],
+				datasets : [
+					{
+						fillColor : "rgba(200,127,60,0.5)",
+						strokeColor : "rgba(200,127,60,1)",
+						data : [1,3,1,2,2,6,2,9]
+					}					
+				]			
+			}			
+			
+        </script>
+
+	</div>
+    
+        <!--  -->
+	<div class="step slide" data-x="-4000" data-y="700" data-scale='0.5'>
+		<h2>Instant press of the recording button</h2>
+        <meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+        <style>        
+			canvasInstantPress{
+    	    }			
+        </style>
+		              
+		<canvas id="canvasInstantPress" height="900" width="900"></canvas>
+                    
+        <script>
+        
+		var radarChartData3 = {
+			labels : ["Help requested in wrong context","Badge already acquired","High background noise","Interrupted video prompt","Instant press of the rec button","Silent voice","Bonus points acquired","Above badge threshold","Close to get the badge","Nothing"],
+			datasets : [
+				{
+					fillColor : "rgba(200,127,60,0.5)",
+					strokeColor : "rgba(200,127,60,1)",
+					data : [8,2,2,3,2,1,37,1,5,95]
+				}					
+			]			
+		}
+			
+        </script>
+
+	</div>
+    
+    
+    
+
+	<!--  -->
+<!--	<div class="step slide" data-x="-5000" data-y="2200" data-scale='0.25'>
+		<h2>Problem Solving</h2>
+        <meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+        <style>
+        	canvasInterrupted{
+        	}
+			canvasConcecutiveError{
+    	    }
+			canvasInstantPress{
+        	}							
+        </style>
+		
+        <table width="881" border="0">
+       
+            <tr>
+                <td><canvas id="canvasInterrupted" height="600" width="600"></canvas></td>
+                <td><canvas id="canvasConcecutiveError" height="600" width="600"></canvas></td>
+                <td><canvas id="canvasInstantPress" height="600" width="600"></canvas></td>
+            </tr>
+                 <tr>
+                <td width="349">Interrupted video prompt </td>
+                <td width="349">Many consecutive mistakes</td>
+                <td width="349">Instant press of the recording button</td>
+			</tr>
+        </table>
+                    
+        <script>
+        
+			var radarChartData1 = {
+				labels : ["Help requested in wrong context","Badge already acquired","Many consecutive mistakes","Interrupted video prompt","Instant press of the rec button","Bonus points acquired","Consecutive correct answers","Above badge threshold","Nothing"],
+				datasets : [
+					{
+						fillColor : "rgba(200,127,60,0.5)",
+						strokeColor : "rgba(200,127,60,1)",
+						data : [1,2,4,13,1,23,11,2,35]
+					}					
+				]			
+			}
+			var radarChartData2 = {
+				labels : ["Help requested in wrong context","Many consecutive mistakes","Interrupted video prompt","Instant press of the rec button","Silent voice","Bonus points acquired","Above badge threshold","Nothing"],
+				datasets : [
+					{
+						fillColor : "rgba(200,127,60,0.5)",
+						strokeColor : "rgba(200,127,60,1)",
+						data : [1,3,1,2,2,6,2,9]
+					}					
+				]			
+			}			
+			var radarChartData3 = {
+				labels : ["Help requested in wrong context","Badge already acquired","High background noise","Interrupted video prompt","Instant press of the rec button","Silent voice","Bonus points acquired","Above badge threshold","Close to get the badge","Nothing"],
+				datasets : [
+					{
+						fillColor : "rgba(200,127,60,0.5)",
+						strokeColor : "rgba(200,127,60,1)",
+						data : [8,2,2,3,2,1,37,1,5,95]
+					}					
+				]			
+			}
+			
+        </script>
+
+	</div>-->
+    
+    <!-- Conclusions -->
+    
+    <!-- Fourth milestone -->
+    <div id="milestones-5" class="step center" data-x='4500' data-y='0' data-z='450' data-scale='0.2' data-rotate-x='-60' data-rotate-y='45'>
+        <h2>Conclusions</h2>
+		<ul class="top-list">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li class="current">4</li>
+        </ul>
+    </div>
+    
+	<!-- Summary of contributions for the three research areas -->
+    <div class="step slide" data-x='5500' data-y='0' data-z='450' data-scale='0.2' data-rotate-x='-60' data-rotate-y='45'>
+         <h2>Conclusions</h2>
+		 <ul>
+        	<li class="substep">Described a formative feedback mechanism in the context of a CALL system</li>
+            <li>Uses information from different sources</li>
+            <li>Performed experiments at three secondary schools</li>
+            <li>Findings suggest thay it helps students during interaction and contributes as a motivation factor</li>
+	        <li>Useful for short-term studies</li>
+	    </ul>
+    </div>
+
+	<div class="step slide" data-x='6500' data-y='0' data-z='450' data-scale='0.2' data-rotate-x='-60' data-rotate-y='45'>
+        <h2>Critique &amp; Next Steps</h2>
+		<ul>
+            <li>1</li>
+            <li>2</li>
+            <li>A second round of the smae experiment at 3 new classrooms at Basel</li>
+        </ul>
+    </div>
+      
+    <!-- Acknowledgements and Q/A -->
+    <div id="end" data-x='7500' data-y='0' data-z='450' data-scale='0.2' data-rotate-x='-60' data-rotate-y='45' class="step">
+      <div class="credits">
+            <h2><a href="#title" class="title">Thank you!</a></h2>
+            
+            <div id="opacity-image-41">
+                <div class="image-wrapper-41">
+                    <p><img src="img/qanda.jpg" width="250" height="250"></p>
+                </div>
+            </div>
+         
+         	<h2><a href="#title" class="title"></a></h2>
+            
+             
+      		<p>&nbsp;</p>
+			<p><a href="https://github.com/ntsourakis/wocci-presentation" target="_blank">https://github.com/ntsourakis/wocci-presentation</a> <img src="img/download.jpg" width="50"></p>
+               
+        </div>    
+	</div>
+
+
+<script src="lib/impress.js"></script>
+<script src="lib/impress-progress.js"></script>
+
+<script>
+
+	impress().init();
+	
+	!function(d,s,id)
+	{
+		var js,fjs=d.getElementsByTagName(s)[0];
+		if(!d.getElementById(id))
+		{
+			js=d.createElement(s);
+			js.id=id;js.src="http://platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js,fjs);
+		}
+	}
+	
+	(document,"script","twitter-wjs");
+	(function() 
+	{
+		var po = document.createElement('script'); 
+		po.type = 'text/javascript'; po.async = true;
+		po.src = 'https://apis.google.com/js/plusone.js';
+		var s = document.getElementsByTagName('script')[0]; 
+		s.parentNode.insertBefore(po, s);
+	})();
+	
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-33401065-1']);
+	_gaq.push(['_trackPageview']);
+	
+	(function() {
+		var ga = document.createElement('script'); 
+		ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; 
+		s.parentNode.insertBefore(ga, s);
+	})();
+	
+	window.addEventListener('hashchange', function() {
+		_gaq.push(['_trackEvent', 'Step', 'move', window.location.hash]);
+	}, false);
+
+</script>
+
+
+</body></html>
