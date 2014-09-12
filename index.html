@@ -11,7 +11,7 @@
     
     <meta name="author" content="Nikos Tsourakis">
     
-    <meta name="description" content="My thesis presentation">
+    <meta name="description" content="My WOCCI 2014 presentation">
 
     <link href="css/style.css" rel="stylesheet">
     <link href="css/impress-progress.css" rel="stylesheet" />
@@ -81,56 +81,6 @@
    
         </h1>    
     </div>
-       
-    <!-- Show the elevator pitch -->
-    <!--<div id="app-8" class="step" data-x="-500" data-y="-1800">
-		<img src="img/elevator.png" width="400">    
-        <div class="distribute-horizontal substep">
-            <div class="box bubble">Design</div>
-            <div class="box bubble">Interaction</div>
-            <div class="box bubble">Evaluation</div>
-        </div>
-    </div>-->    
-    <!--
-    <div id="app-8-2" class="step invisible" data-x="-2500" data-y="-1800">
-        <img src="img/elevator.png" width="400">
-        <div class="box ballon ballon-down">deployment</div>
-        <div class="box ballon ballon-down down2">evaluation</div>
-    </div>
-    
-    <div id="app-8-3" class="step invisible" data-x="-2500" data-y="-1800">
-        <img src="img/elevator.png" width="400">
-        <div class="box ballon ballon-down">deployment</div>
-        <div class="box ballon ballon-down down2">evaluation</div>
-        <div class="box ballon ballon-up">mobile</div>
-        <div class="box ballon ballon-up up2">mobile</div>
-        <div class="box ballon ballon-up up3">speech</div>
-        <div class="box ballon ballon-up up4">multimodal</div>
-    </div>
-    
-    <div id="app-8-4" class="step invisible" data-x="-2500" data-y="-1800">
-        <img src="img/elevator.png" width="400">
-        <div class="box ballon ballon-down">img.png</div>
-        <div class="box ballon ballon-down down2">img@2x.png</div>
-        <div class="box ballon ballon-up">ldpi</div>
-        <div class="box ballon ballon-up up2">mdpi</div>
-        <div class="box ballon ballon-up up3">hdpi</div>
-        <div class="box ballon ballon-up up4">xhdpi</div>
-        <div class="box ballon ballon-up up5">tvdpi</div>
-    </div>
--->
-<!--
-    <div id="elevator" class="step slide" data-x="-2500" data-y="-1800" data-scale="0.5">
-        <table width="900" border="0">
-            <tr>
-            <td>&nbsp;<img src="img/elevator.png" width="400"></td>
-            <td>&nbsp;<div class="substep">
-            	<img src="img/evaluation-low.png" width="400" align="middle">
-             </div>
-</td>
-            
-        </table>		
-    </div>-->
     
     <!-- Introduσing the themes of the presentation -->
 	<div id="introduction" class="cube">
@@ -163,8 +113,7 @@
         
 		<div class="topFace step" data-x="1500" data-y="-2625" data-z="-1005" data-rotate-x="60" data-rotate-y="0" data-rotate-z="45" data-scale="1">
         	<h2>Problem to solve</h2>
-
-<div id="transform" class="substep invisible">
+			<div id="transform" class="substep invisible">
                         <div class="content">
                             <div class="tag">... but feedback is needed in different levels of the interaction!</div>                           
                         </div>
@@ -207,22 +156,13 @@
                 </div>
 
         </div>
-    
-<!--        <div class="backLeftFace step" data-x="1375" data-y="-2535" data-z="-1200" data-rotate-x="-30" data-rotate-y="225" data-rotate-z="0" data-scale="1">
-			<h2>Research Questions</h2>
-            <ul>
-				<li class="substep"><em>Design.</em> What architectures for mobile platforms can be incorporated in order to offer efficient and robust systems? Will the design be based on open standards? Will this infrastructure be easily extensible and usable by others?</li>
-            	<li class="substep"><em>Interaction.</em> What are the appropriate output modalities for each situation? What kinds of different user interactions should be supported by the system?</li>
-            	<li class="substep"><em>Evaluation.</em> What makes a system more successful compared to another? What kind of evaluation should be performed, taking into account different metrics?</li>  
-        	</ul>
-        </div>-->
-    </div>
+	</div>
     
     <!-- Overview of the presentation -->
 	<div id="outline-1" class="step invisible" data-x="2500" data-y="-2035" data-z="-1200">
         <h2>Overview of the Presentation</h2>
         <ul class="option-list">
-            <li>
+            <li class="substep">
                 <span>1</span>The CALL-SLT system
                 <span>Offers students of English the opportunity to train their receptive and productive language skills in various conversational dialogue scenarios</span>
             </li>
@@ -372,7 +312,7 @@
             	<p>In terms of phrasing:</p>
                 <p><em>&nbsp;&nbsp;&nbsp;Error: 30232 An error occured while your speech was being recognized.</em></p>
                 <p>vs.</p>
-                <p><em>&nbsp;&nbsp;&nbsp;I think you are talking to close to the microphone.</em></p>
+                <p><em>&nbsp;&nbsp;&nbsp;I think you are talking too close to the microphone.</em></p>
 		</div>
         </div>
         <div class="substep">
@@ -461,6 +401,7 @@
         </div>
     </div>
     
+	<!-- Feedback module components -->  
 	<div class="step slide" data-x="-2000" data-y="1400" data-scale='0.7'> 
 		<p>&nbsp;</p>
         <p>&nbsp;</p>
@@ -480,7 +421,7 @@
 		</ul>		
     </div>
     
-    
+	<!-- First input source -->
 	<div class="step slide" data-x="-1000" data-y="1200" data-scale='0.5'>
         <h2>Input From The Client</h2>
 		<ul>
@@ -492,6 +433,7 @@
 		</ul>
     </div>
     
+	<!-- Second input source -->
     <div class="step slide" data-x="0" data-y="1200" data-scale='0.5'>
         <h2>Input From The Dialogue Manager</h2>
 		<ul>
@@ -505,6 +447,7 @@
 		</ul>
     </div>
     
+    <!-- Third input source -->
 	<div class="step slide" data-x="1000" data-y="1200" data-scale='0.5'>
         <h2>Input From The Wavefile</h2>
 		<ul>
@@ -517,6 +460,7 @@
 		</ul>
     </div>
 	
+    <!-- Feature space -->
 	<div class="step slide" data-x="2000" data-y="1200" data-scale='0.5'>
         <h2>Feature space</h2>
         <div class="box bubble">With praat toolkit we extracted 27 typical voice analysis measurements (kept the ones in green)</div> 
@@ -525,6 +469,7 @@
         </div>
     </div>
 	
+    <!-- Classification results -->
 	<div class="step slide" data-x="3000" data-y="1200" data-scale='0.5'>
         <h2>Classification task</h2>
         <div class="box bubble">With WEKA toolkit we applied different machine learning algorithms to classify four events: high background noise, silent speech, instant press of the recording button and normal waveform</div> 
@@ -533,6 +478,7 @@
         </div>
     </div>
     
+    <!-- The expert decision part -->
 	<div class="step example" data-x="-2000" data-y="2200" data-scale='0.5'>
         <h2>Expert Decision</h2>
 		<ul>
@@ -552,6 +498,7 @@
          
     </div>
     
+    <!-- Present the current rules set -->
     <div class="step slide" data-x="-1000" data-y="2200" data-scale='0.5'>
         <h2>Rules Set</h2>
         <div id="opacity-image-05">
@@ -636,6 +583,7 @@
        
 	</div>
 
+	<!-- Feedback message on the GUI -->
 	<div class="step slide" data-x="2000" data-y="2200" data-scale='0.5'>
         <h2>Feeback Message On The GUI</h2>
         <div id="opacity-image-04">
@@ -686,11 +634,11 @@
                 	<li>Improvement in language learning, or in student motivation or in solving interaction problems must be relative to something</li>
                 </ul>
             </li>
-            <li class="substep animation"><em>No-feedback as control group</em></li>            
+            <li class="substep animation"><em>No-feedback as a control group</em></li>            
 		</ul>
 	</div>
     
-	<!-- Comparison Measurements -->
+	<!-- Comparison measurements -->
     <div class="step slide" data-x="-5000" data-y="-1300" data-scale='0.25'>
     	<h2>Comparison Measurements</h2>
         <ul>
@@ -813,7 +761,7 @@
 
 	</div>
     
-  	<!--  -->
+  	<!-- Some more results -->
 	<div class="step slide" data-x="-5000" data-y="-300" data-scale='0.25'>
 		<h2>Badges Acquired & Subjective Opinion</h2>
         <div class="substep">
@@ -833,7 +781,7 @@
        
 	</div>
     
-	<!--  -->
+	<!-- What happened after the video prompt was interrupted -->
 	<div class="step slide" data-x="-5000" data-y="700" data-scale='0.5'>
 		<h2>Interrupted video prompt</h2>
         <meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
@@ -863,7 +811,7 @@
 	</div>
     
     
-    <!--  -->
+    <!-- What happened after many consecutive mistakes -->
 	<div class="step slide" data-x="-4500" data-y="700" data-scale='0.5'>
 		<h2>Many consecutive mistakes</h2>
         <meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
@@ -891,7 +839,7 @@
 
 	</div>
     
-        <!--  -->
+	<!-- What happened after the nstant press of the recording button -->
 	<div class="step slide" data-x="-4000" data-y="700" data-scale='0.5'>
 		<h2>Instant press of the recording button</h2>
         <meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
@@ -999,28 +947,33 @@
         </ul>
     </div>
     
-	<!-- Summary of contributions for the three research areas -->
+	<!-- Summary of the presentation -->
     <div class="step slide" data-x='5500' data-y='0' data-z='450' data-scale='0.2' data-rotate-x='-60' data-rotate-y='45'>
          <h2>Conclusions</h2>
 		 <ul>
         	<li class="substep">Described a formative feedback mechanism in the context of a CALL system</li>
-            <li>Uses information from different sources</li>
-            <li>Performed experiments at three secondary schools</li>
-            <li>Findings suggest thay it helps students during interaction and contributes as a motivation factor</li>
-	        <li>Useful for short-term studies</li>
+            <li class="substep">Uses information from different sources</li>
+            <li class="substep">Performed experiments at three secondary schools</li>
+            <li class="substep">Findings suggest thay it helps students during interaction and contributes as a motivation factor</li>
+	        <li class="substep">Useful for short-term studies</li>
 	    </ul>
     </div>
 
+	<!-- Critique and next steps -->
 	<div class="step slide" data-x='6500' data-y='0' data-z='450' data-scale='0.2' data-rotate-x='-60' data-rotate-y='45'>
         <h2>Critique &amp; Next Steps</h2>
 		<ul>
-            <li>1</li>
-            <li>2</li>
-            <li>A second round of the smae experiment at 3 new classrooms at Basel</li>
+            <li class="substep">Feedback is significantly more effective when it provides details of how to improve</li>
+            <li class="substep">Timely feedback: keep a record and postpone the response after several interactions</li>
+            <li class="substep">Transform the module into a virtual advisor, tutor or a friend</li>
+            <li class="substep">More data please!!
+            	<ul>
+                	<li>A second round of the same experiment at 3 new classrooms at Basel</li>
+				</ul>
         </ul>
     </div>
       
-    <!-- Acknowledgements and Q/A -->
+    <!-- Q/A -->
     <div id="end" data-x='7500' data-y='0' data-z='450' data-scale='0.2' data-rotate-x='-60' data-rotate-y='45' class="step">
       <div class="credits">
             <h2><a href="#title" class="title">Thank you!</a></h2>
