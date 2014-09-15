@@ -82,7 +82,7 @@
         </h1>    
     </div>
     
-    <!-- Introduσing the themes of the presentation -->
+    <!-- Introducing the themes of the presentation -->
 	<div id="introduction" class="cube">
         
 	<div class="bottomFace step" data-x="1500" data-y="-2320" data-z="-1180" data-rotate-x="60" data-rotate-y="180" data-rotate-z="45" data-scale="1">
@@ -122,9 +122,9 @@
          
 			<p></p>
  			<ul>
-				<li class="substep">Report constructive commments on the interaction.</li>
+				<li class="substep">Report constructive comments on the interaction.</li>
 	        	<li class="substep">Typical impediments: Software installation, microphone configuration, learning how to use the interface.</li>
-            	<li class="substep">Students may be overwhelmed by the functionalities offered by the system. For example gamificaction elements.</li>  
+            	<li class="substep">Students may be overwhelmed by the functionalities offered by the system. For example gamification elements.</li>  
         	</ul>
               
         </div>
@@ -279,7 +279,7 @@
 	<!-- Problems with current interface -->
 	<!-- Too much feedback -->
     <div class="step slide" data-x="2000" data-y="-700">
-        <h2>A Misrecognition Occured</h2>
+        <h2>A Misrecognition Occurred</h2>
             <div class="box bubble substep">Users may be overwhelmed by too much feedback</div>    
             <div class="substep">
                 <img src="img/problem1.png" width="724">                  
@@ -310,7 +310,7 @@
         <div class="substep">
         	<div class="box bubble">
             	<p>In terms of phrasing:</p>
-                <p><em>&nbsp;&nbsp;&nbsp;Error: 30232 An error occured while your speech was being recognized.</em></p>
+                <p><em>&nbsp;&nbsp;&nbsp;Error: 30232 An error occurred while your speech was being recognized.</em></p>
                 <p>vs.</p>
                 <p><em>&nbsp;&nbsp;&nbsp;I think you are talking too close to the microphone.</em></p>
 		</div>
@@ -649,7 +649,7 @@
                             <li>Student score per session</li>
                             <li>Interactions per session</li>                    
                             <li>Total number of sessions</li>                    
-                            <li>Badges acquired</li>                                                            
+                            <li>Number of badges acquired</li>                                                            
 						</ul>
                     </li>
                     <li>Problem resolution</li>
@@ -661,10 +661,23 @@
 		</ul>
     </div>
     
-
-  	<!-- Show the performance plots -->
+    <!-- Distribution of feedback -->
 	<div class="step slide" data-x="-5000" data-y="-800" data-scale='0.25'>
-		<h2>"Motivation" ??Among Classrooms</h2>
+		<h2>Distribution Of Feedback</h2>
+			<table width="50" border="0">
+                <tr>
+                	<p><em>S1-S2: no feedback</em></p>
+                	<p><em>S3: feedback</em></p>
+                </tr>
+                <tr>
+                	<img src="img/feedback.png">
+                </tr>
+    	</table>
+    </div>
+    
+  	<!-- Show the performance plots -->
+	<div class="step slide" data-x="-5000" data-y="-300" data-scale='0.25'>
+		<h2>Motivation Among Classrooms</h2>
         <meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
         <style>
         	canvasScoreProp{
@@ -762,7 +775,7 @@
 	</div>
     
   	<!-- Some more results -->
-	<div class="step slide" data-x="-5000" data-y="-300" data-scale='0.25'>
+	<div class="step slide" data-x="-5000" data-y="200" data-scale='0.25'>
 		<h2>Badges Acquired & Subjective Opinion</h2>
         <div class="substep">
 	        <img src="img/total-badges.png" width="450">
@@ -774,7 +787,7 @@
 	</div>
   
 	<!-- Feedback module for solving interaction problems -->
-	<div class="step slide" data-x="-5000" data-y="200" data-scale='0.25'>
+	<div class="step slide" data-x="-5000" data-y="700" data-scale='0.25'>
 		<h2>Problem Solving</h2>
        		
         <div class="box">Frequency of feedback presented in the subsequent interaction after an error</div>
@@ -782,7 +795,7 @@
 	</div>
     
 	<!-- What happened after the video prompt was interrupted -->
-	<div id="graph1" class="step slide" data-x="-5000" data-y="700" data-scale='0.5'>
+	<div id="graph1" class="step slide" data-x="-5000" data-y="1200" data-scale='0.5'>
 		<h2>Interrupted video prompt</h2>
 		<p>&nbsp;</p>
 		<p>&nbsp;</p>       
@@ -794,7 +807,7 @@
     </div>
     
 	<!-- What happened after the video prompt was interrupted -->
-	<div class="step slide" data-x="-5000" data-y="700" data-scale='0.5'>
+	<div class="step slide" data-x="-5000" data-y="1200" data-scale='0.5'>
         <meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
       <style>
         	canvasInterrupted{
@@ -822,7 +835,7 @@
 	</div>
     
 	 <!-- What happened after many consecutive mistakes -->
-   	<div id="graph2" class="step slide" data-x="-4500" data-y="700" data-scale='0.5'>
+<!--   	<div id="graph2" class="step slide" data-x="-4500" data-y="1200" data-scale='0.5'>
 		<h2>Many consecutive mistakes</h2>
 		<p>&nbsp;</p>
 		<p>&nbsp;</p>       
@@ -834,7 +847,7 @@
     </div>
     
     <!-- What happened after many consecutive mistakes -->
-	<div class="step slide" data-x="-4500" data-y="700" data-scale='0.5'>
+<!--	<div class="step slide" data-x="-4500" data-y="1200" data-scale='0.5'>
         <meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
         <style>        
 			canvasConcecutiveError{
@@ -846,22 +859,22 @@
         <script>
         
 			var radarChartData2 = {
-				labels : ["Help requested in wrong context","Many consecutive mistakes","Interrupted video prompt","Instant press of the rec button","Silent voice","Bonus points acquired","Above badge threshold","Nothing"],
-				datasets : [
-					{
-						fillColor : "rgba(200,127,60,0.5)",
-						strokeColor : "rgba(200,127,60,1)",
-						data : [1,3,1,2,2,6,2,9]
-					}					
-				]			
-			}			
+				labels : ["Help requested in wrong context","Badge already acquired","High background noise","Interrupted video prompt","Instant press of the rec button","Silent voice","Bonus points acquired","Above badge threshold","Close to get the badge","Nothing"],
+			datasets : [
+				{
+					fillColor : "rgba(200,127,60,0.5)",
+					strokeColor : "rgba(200,127,60,1)",
+					data : [8,2,2,3,2,1,37,1,5,95]
+				}					
+			]			
+		}
 			
         </script>
 
-	</div>
+	</div>-->
     
-    <!-- What happened after the nstant press of the recording button -->
-    <div id="graph3" class="step slide" data-x="-4000" data-y="700" data-scale='0.5'>
+    <!-- What happened after the instant press of the recording button -->
+    <div id="graph3" class="step slide" data-x="-4500" data-y="1200" data-scale='0.5'>
 		<h2>Instant press of the recording button</h2>
 		<p>&nbsp;</p>
 		<p>&nbsp;</p>       
@@ -872,8 +885,8 @@
         <p>&nbsp;</p>
     </div>
     
-	<!-- What happened after the nstant press of the recording button -->
-	<div class="step slide" data-x="-4000" data-y="700" data-scale='0.5'>
+	<!-- What happened after the instant press of the recording button -->
+	<div class="step slide" data-x="-4500" data-y="1200" data-scale='0.5'>
         <meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
         <style>        
 			canvasInstantPress{
@@ -885,15 +898,16 @@
         <script>
         
 		var radarChartData3 = {
-			labels : ["Help requested in wrong context","Badge already acquired","High background noise","Interrupted video prompt","Instant press of the rec button","Silent voice","Bonus points acquired","Above badge threshold","Close to get the badge","Nothing"],
-			datasets : [
-				{
-					fillColor : "rgba(200,127,60,0.5)",
-					strokeColor : "rgba(200,127,60,1)",
-					data : [8,2,2,3,2,1,37,1,5,95]
-				}					
-			]			
-		}
+				labels : ["Help requested in wrong context","Many consecutive mistakes","Interrupted video prompt","Instant press of the rec button","Silent voice","Bonus points acquired","Above badge threshold","Nothing"],
+				datasets : [
+					{
+						fillColor : "rgba(200,127,60,0.5)",
+						strokeColor : "rgba(200,127,60,1)",
+						data : [1,3,1,2,2,6,2,9]
+					}					
+				]			
+			}			
+			
 			
         </script>
 
@@ -986,7 +1000,7 @@
         	<li class="substep">Described a formative feedback mechanism in the context of a CALL system</li>
             <li class="substep">Uses information from different sources</li>
             <li class="substep">Performed experiments at three secondary schools</li>
-            <li class="substep">Findings suggest thay it helps students during interaction and contributes as a motivation factor</li>
+            <li class="substep">Findings suggest they it helps students during interaction and contributes as a motivation factor</li>
 	        <li class="substep">Useful for short-term studies</li>
 	    </ul>
     </div>
