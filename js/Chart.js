@@ -209,7 +209,7 @@ window.Chart = function(context){
 			scaleShowLine : true,
 			scaleLineColor : "rgba(0,0,0,.1)",
 			scaleLineWidth : 1,
-			scaleShowLabels : false,
+			scaleShowLabels : true,
 			scaleLabel : "<%=value%>",
 			scaleFontFamily : "'Arial'",
 			scaleFontSize : 12,
